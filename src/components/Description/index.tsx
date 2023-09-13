@@ -39,8 +39,6 @@ const Description = () => {
 				},
 			}}
 		>
-			{/* <Typography>{t('appDescription')}</Typography>
-			<Typography>{t('autoSendData')}</Typography> */}
 			<Typography>
 				{t('instructionsForWebFlow')}{' '}
 				<a href={instructionLink} target="_blank" rel="noreferrer">
