@@ -56,8 +56,6 @@ const FetchProvider: React.FC<IProps> = ({ children }) => {
 				headers: { Accept: 'application/json', 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
 			});
 			getSecretKey();
-			// const data: ISecretKey = await res.json();
-			// setKey(data?.webhookUrl || '');
 		} catch (e) {
 			errorNotification();
 		} finally {
