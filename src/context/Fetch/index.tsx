@@ -29,7 +29,7 @@ const FetchProvider: React.FC<IProps> = ({ children }) => {
 	const [key, setKey] = useState('');
 	const [loading, setLoading] = useState(true);
 	const [loadingRegenerate, setLoadingRegenerate] = useState(false);
-	const WEBFLOW_API = 'https://template-uspacy.alterego.biz.ua/webflow/v1';
+	const WEBFLOW_API = 'https://webflow-uspacy.alterego.digital/webflow/v1';
 	const { errorNotification } = useErrorNotification();
 	const getSecretKey = async () => {
 		setLoading(true);
