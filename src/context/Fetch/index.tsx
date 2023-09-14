@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
+import { isDev, isStage } from '../../helpers';
 import { getToken } from '../../helpers/db';
 import { useErrorNotification } from '../../hooks/useErrorNotification';
 
@@ -29,7 +30,7 @@ const FetchProvider: React.FC<IProps> = ({ children }) => {
 	const [key, setKey] = useState('');
 	const [loading, setLoading] = useState(true);
 	const [loadingRegenerate, setLoadingRegenerate] = useState(false);
-	const WEBFLOW_API = 'https://webflow-uspacy.alterego.digital/webflow/v1';
+	const WEBFLOW_API = `https://${isDev || isStage ? 'template-uspacy.alterego.biz.ua' : 'webflow-uspacy.alterego.digital'}/webflow/v1`;
 	const { errorNotification } = useErrorNotification();
 	const getSecretKey = async () => {
 		setLoading(true);
